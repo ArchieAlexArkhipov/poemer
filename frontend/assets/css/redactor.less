@@ -1,0 +1,137 @@
+.editor-input {
+  background: inherit;
+  width: 100%;
+  border-radius: 4px;
+  border: 1px dashed #c8c8c8;
+  padding: 6px 8px;
+  outline: none;
+}
+#editor {
+  min-height: 240px;
+  height: auto;
+  width: 100%;
+  border-radius: 4px;
+  border: 1px dashed #c8c8c8;
+  text-align: left;
+  font-family: 'Balsamiq Sans', cursive;
+  font-size: 20px;
+  padding: 15px;
+  outline: none;
+}
+.editor {
+  .btn-toolbar {
+    justify-content: center;margin-bottom: 8px;
+  }
+  .dropdown-menu {
+    padding: 8px;
+    a {
+      display: block;
+      transition: 0.2s background;
+      &:hover {
+        background: #eee;
+      }
+    }
+    li {
+      cursor: pointer;
+    }
+  }
+}
+
+.editor-poem-card {
+  margin-bottom: 32px;
+
+  .poem-footer {
+    position: relative;
+
+    .poem-tags {
+      display: inline-block;
+
+      a {
+        span {
+          display: none;
+          float: right;
+          padding-left: 8px;
+        }
+        &:hover {
+          text-decoration: none;
+          color: inherit;
+          cursor: default;
+
+          span {
+            display: block;
+            &:hover {
+              cursor: pointer;
+              color: #37a3fd;
+            }
+          }
+        }
+      }
+    }
+
+    #poemTagInput {
+      display: inline-block;
+      max-width: 160px;
+      background: inherit;
+      border-radius: 4px;
+      border: 1px dashed #c8c8c8;
+      padding: 6px 8px;
+      outline: none;
+    }
+  }
+
+  .tags-list-wrap {
+    position: relative;
+
+    .tags-list {
+      display: none;
+      position: absolute;
+      top: 8px;
+      height: auto;
+      min-height: 30px;
+      background: #fff;
+      box-shadow: 0 4px 4px -4px black;
+      border-radius: 8px;
+      left: 0;
+      right: 0;
+      padding: 16px;
+      z-index: 1000;
+      max-height: 300px;
+      overflow-y: auto;
+
+      span {
+        display: block;
+        font-weight: bold;
+        font-size: 13px;
+      }
+
+      a {
+        display: block;
+        padding: 4px 0;
+        border-bottom: 1px dashed #c8c8c8;
+        cursor: pointer;
+
+        &:hover {
+          color: #37a3fd;
+          font-weight: bold;
+          text-decoration: none;
+        }
+      }
+    }
+  }
+}
+.redactor-btns {
+  padding: 16px 0;
+}
+
+#error-msg {
+  color: red;
+  padding: 16px 0;
+}
+
+#redactorForm {
+  .help-block {
+    color: red;
+    font-size: 13px;
+    letter-spacing: 1px;
+  }
+}

@@ -1,0 +1,220 @@
+.summary {
+  display: none;
+}
+
+.pagination {
+  display: block;
+  text-align: center;
+  margin: 32px 0;
+  border: 1px dashed #d2d2d2;
+  border-radius: 32px;
+  position: relative;
+
+  li {
+    display: inline-block;
+    padding: 6px 12px;
+
+    &.active {
+      background: #37a3fd;
+      width: 40px;
+      height: 40px;
+      border-radius: 100%;
+      border: 3px solid #0e6dbb;
+      a {
+        color: #fff;
+      }
+    }
+    &.prev,&.next {
+      display: none;
+    }
+    &.prev {
+      position: absolute;
+      left: 0;
+
+      &::after {
+        content: "Назад";
+      }
+    }
+    &.next {
+      position: absolute;
+      right: 0;
+
+      &::before {
+        content: "Вперед";
+      }
+    }
+    a {
+      &:hover {
+        text-decoration: none;
+      }
+    }
+  }
+}
+
+.poem-card {
+  margin-top: 32px;
+  border: 1px dashed #d2d2d2;
+  border-radius: 8px;
+  padding: 16px;
+
+  .poem-header {
+
+
+    .poem-img {
+      float: left;
+      overflow: hidden;
+
+      img, .img {
+        display: block;
+        width: 42px;
+        height: 42px;
+        border-radius: 100%;
+        border: 1px dashed #c8c8c8;
+        // background: #999;
+      }
+    }
+    .poem-author {
+      float: left;
+      width: calc(100% - 42px - 100px);
+      padding-left: 16px;
+
+      .poem-author-name {
+        display: block;
+        font-weight: bold;
+      }
+      .poem-date {
+        font-size: 12px;
+        opacity: 0.5;
+        letter-spacing: 1px;
+      }
+    }
+    .poem-actions {
+      float: right;
+      width: 100px;
+      text-align: right;
+
+      a {
+        line-height: 42px;
+        opacity: 0.5;
+
+        i {
+          font-size: 22px;
+        }
+        span {
+          padding-left: 4px;
+          font-size: 16px;
+        }
+        &:hover {
+          text-decoration: none;
+        }
+      }
+      .poem-likes-btn {
+
+        &.active {
+          color: red;
+        }
+      }
+      .poem-comments-btn {
+        margin-left: 8px;
+      }
+      .poem-bookmark-btn {
+        margin-left: 12px;
+
+        &.active {
+          color: blue;
+        }
+      }
+    }
+  }
+
+  .poem-content {
+    padding: 6px 14px;
+    border-top: 1px dashed #d2d2d2;
+    border-bottom: 1px dashed #d2d2d2;
+    margin-top: 16px;
+    margin-bottom: 16px;
+
+    .poem-content-wrap {
+      overflow: hidden;
+      max-height: 218px;
+
+      &.open {
+        height: auto;
+        max-height: none;
+      }
+
+      .poem-title {
+        padding-left: 6px;
+        font-size: 34px;
+        font-family: 'Balsamiq Sans', cursive;
+      }
+
+      .poem-text {
+        font-family: 'Balsamiq Sans', cursive;
+        font-size: 20px;
+      }
+    }
+
+    .open-poem {
+      margin: 8px auto;
+      font-size: 13px;
+    }
+
+  }
+
+  .poem-footer {
+
+    .poem-tags {
+      a {
+        display: inline-block;
+        padding: 6px 8px;
+        margin-right: 8px;
+        border-radius: 8px;
+        background: #d2d2d2;
+        -webkit-transition: -webkit-transform .2s;
+        transition: transform .2s;
+        transition: transform .2s,-webkit-transform .2s;
+        box-shadow: 0 2px 2px -2px black;
+        font-size: 13px;
+        border: 1px solid #bbbbbb;
+        margin-bottom: 8px;
+
+        &:hover {
+          text-decoration: none;
+          -webkit-transform: scale(1.05);
+          transform: scale(1.05);
+        }
+      }
+    }
+
+  }
+}
+
+.poem-top-actions {
+  padding-top: 16px;
+  a {
+    font-size: 11px !important;
+    margin-top: 0 !important;
+  }
+}
+
+.no-published-label {
+  font-weight: bold;
+  color:red;
+  font-size:13px;
+  text-align: center;
+}
+
+.no-tags-label {
+  letter-spacing: 1px;
+  font-size: 13px;
+  opacity: 0.6;
+  text-align: center;
+}
+
+.error-msg {
+  color:red;
+  letter-spacing:1px;
+  text-align:center;
+  margin:16px;
+}

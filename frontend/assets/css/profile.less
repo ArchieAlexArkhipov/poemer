@@ -1,0 +1,99 @@
+.profile-card {
+  text-align: center;
+
+  .profile-img {
+    overflow: hidden;
+
+    img, .img {
+      display: inline-block;
+      width: 100px;
+      height: 100px;
+      border-radius: 100%;
+      background: #999;
+      margin: 16px auto;
+      border: 1px dashed #c8c8c8;
+    }
+  }
+
+  .profile-name {
+
+  }
+
+  .profile-about {
+    font-weight: bold;
+    padding: 16px 0;
+  }
+
+  .profile-stat {
+    margin: 16px 0;
+
+    .profile-stat-col {
+      display: block;
+      border-radius: 10px;
+      border: 1px dashed #d2d2d2;
+      padding: 8px 0;
+
+      &:hover {
+        text-decoration: none;
+      }
+      div {
+        font-size: 24px;
+        font-weight: bold;
+      }
+      span {
+        opacity: 0.7;
+        font-size: 13px;
+      }
+    }
+  }
+
+  .profile-action {
+
+  }
+
+}
+
+#profileEditForm {
+  margin: 16px 0;
+  text-align: center;
+
+  .edit-profile-img-wrap {
+    margin: 16px 0;
+    overflow: hidden;
+
+    img {
+      display: block;
+      width: 80px;
+      height: 80px;
+      border-radius: 100%;
+      border: 1px dashed #c8c8c8;
+      margin: auto;
+      margin-bottom: 16px;
+    }
+  }
+
+  label {
+    display: block;
+    letter-spacing: 1px;
+    opacity: 0.6;
+    margin-bottom: 8px;
+  }
+  input[type="text"], textarea {
+    display: inline-block;
+    width: 60%;
+    border-radius: 4px;
+    border: 1px dashed #c8c8c8;
+    padding: 6px 8px;
+    outline: none;
+    background: inherit;
+  }
+  button {
+    margin: 16px 0;
+  }
+}
+
+.exit-btn {
+  margin-top: 16px;
+  color: red;
+  border-color: red;
+}

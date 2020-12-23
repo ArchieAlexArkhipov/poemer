@@ -1,0 +1,383 @@
+@font-face {
+  font-family: "Bafgh";
+  src: url("../fonts/BalsamiqSans-Regular.ttf") format("truetype");
+  font-style: normal;
+  font-weight: normal;
+}
+@font-face {
+  font-family: "Comfortaa";
+  src: url("../fonts/Comfortaa-Regular.ttf") format("truetype");
+  font-style: normal;
+  font-weight: normal;
+}
+@font-face {
+  font-family: "Cinzel";
+  src: url("../fonts/Cinzel-Regular.ttf") format("truetype");
+  font-style: normal;
+  font-weight: normal;
+}
+
+body {
+// background: #d9dbd6;
+ background: #eaeae8;
+ color: #141514;
+ font-family: 'Comfortaa', cursive;
+}
+
+a {
+  color: #141514;
+}
+button {
+  border: none;
+  outline: none;
+  background: inherit;
+}
+
+.main-header {
+
+  padding: 16px 0;
+
+  .logo {
+    font-family: 'Cinzel', serif;
+    font-size: 34px;
+    color: #141514;
+
+    &:hover {
+      text-decoration: none;
+      color: #141514;
+    }
+  }
+
+  .header-right {
+    float: right;
+    width: calc(100% - 145px);
+    text-align: right;
+  }
+
+  .main-nav {
+    display: inline-block;
+
+    a {
+      position: relative;
+      display: block;
+      float: left;
+      padding: 0 16px;
+      line-height: 51px;
+
+      &.with-ico {
+        opacity: 0.6;
+        padding: 0px 10px;
+
+        &.fa {
+          font-size: 20px;
+        }
+      }
+
+      &.active {
+        font-weight: bold;
+
+        &::after {
+          content: '';
+          position: absolute;
+          top: 0;
+          left: 0;
+          right: 0;
+          height: 2px;
+          background: #141514;
+          opacity: 0.3;
+        }
+      }
+    }
+  }
+}
+.search-form {
+  display: inline-block;
+  float: right;
+  padding-top: 9px;
+  margin-left: 16px;
+  position: relative;
+
+  input[type="text"] {
+    outline: none;
+    border: none;
+    border-radius: 8px;
+    opacity: 0.5;
+    padding: 4px 8px;
+    padding-right: 26px;
+    border: 1px solid #c8c8c8;
+  }
+
+  button {
+    position: absolute;
+    top: 13px;
+    right: 2px;
+    background: inherit;
+    opacity: 0.3;
+  }
+}
+
+.feed-content {
+  max-width: 480px;
+  min-width: 480px;
+  margin: auto;
+
+  h2 {
+    text-align: center;
+    margin-top: 16px;
+  }
+}
+
+.button-primary, .button-filled {
+  display: inline-block;
+  padding: 8px 16px;
+  border-radius: 10px;
+  border: 1px dashed #37a3fd;
+  color: #37a3fd;
+  outline: none;
+
+  &:hover {
+    border: 1px solid #37a3fd;
+    outline: none;
+    font-weight: bold;
+    color: #37a3fd;
+    text-decoration: none;
+  }
+}
+
+.button-filled {
+  background: #37a3fd;
+  color: #fff;
+  transition: 0.3s background;
+
+  &:hover {
+    background: inherit;
+    border: 1px dashed #37a3fd;
+  }
+}
+
+
+.main-footer {
+  padding: 16px 0;
+  .footer-copyright {
+    letter-spacing: 1px;
+    opacity: 0.6;
+    line-height: 32px;
+    font-size: 13px;
+  }
+  .footer-social {
+    float: right;
+    a {
+      display: inline-block;
+      width: 30px;
+      height: 30px;
+      text-align: center;
+      border-radius: 100%;
+      line-height: 30px;
+      border: 1px solid #999;
+      margin-left: 8px;
+      opacity: 0.6;
+
+      &:hover {
+        text-decoration: none;
+        opacity: 1;
+      }
+    }
+  }
+}
+
+.list-view {
+  .empty {
+    text-align: center;
+    letter-spacing: 1px;
+    margin: 32px 0;
+    opacity: 0.6;
+  }
+}
+
+
+.modal-wrapper {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: rgba(100, 100, 100, 0.6);
+  z-index: 5000;
+  display: none;
+  &.open {
+    display: block;
+  }
+
+  .modal-block {
+    position: absolute;
+    width: 400px;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 6000;
+    background: #fff;
+    box-shadow: 0 2px 2px -2px black;
+    border-radius: 4px;
+
+
+    .close-modal-btn {
+      &:hover {
+        text-decoration: none;
+      }
+    }
+    .modal-content-wrap {
+      height: 300px;
+      padding: 16px;
+
+      .modal-scroll {
+        max-height: calc(300px - 32px);
+        overflow-y: auto;
+
+        .follows-modal-list {
+          .fml-block {
+            margin-bottom: 8px;
+
+            .fml-img {
+              float: left;
+              .img {
+                width: 32px;
+                height: 32px;
+                border: 1px dashed #c8c8c8;
+                border-radius: 100%;
+              }
+            }
+            .fml-content {
+              float: left;
+              width: calc(100% - 32px - 105px);
+              padding-left: 16px;
+              a {
+                line-height: 32px;
+                letter-spacing: 1px;
+                font-size: 13px;
+              }
+            }
+            .fml-follow-btn {
+              float: right;
+              font-size: 11px;
+              padding: 8px;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+.empty {
+  text-align: center;
+  letter-spacing: 1px;
+  margin: 32px 0;
+  opacity: 0.6;
+}
+
+
+
+#menuBtn {
+  float: right;
+  width: 32px;
+  height: 32px;
+  font-size: 32px;
+  margin-top: 4px;
+  opacity: 0.4;
+  display: none;
+}
+.mobile-menu {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 9000;
+  background: #eaeae8;
+  display: none;
+
+  #closeMenu {
+    float: right;
+    margin: 16px;
+    font-size: 32px;
+    opacity: 0.6;
+  }
+
+  .mobile-nav {
+    margin-top: 64px;
+
+    a {
+      display: block;
+      text-align: center;
+      padding: 16px 0;
+      border-bottom: 1px dashed #c8c8c8;
+
+      &.active {
+        color: #37a3fd;
+        font-weight: bold;
+      }
+    }
+  }
+}
+#mobileSearchForm {
+  float: left;
+  margin-top: 12px;
+  width: calc(100% - 80px);
+  input {
+    width: 100%;
+  }
+}
+
+
+
+
+@media (max-width: 992px) {
+ .main-nav, #searchForm {
+   display: none !important;
+ }
+ #menuBtn {
+   display: block;
+ }
+}
+@media (max-width: 520px) {
+ .feed-content {
+   width: auto !important;
+   min-width: auto !important;
+ }
+}
+@media (max-width: 580px) {
+  .profile-stat-col {
+    margin-bottom: 8px;
+  }
+  #profileEditForm input[type="text"], #profileEditForm textarea {
+    width: 100% !important;
+  }
+ .main-footer {
+   text-align: center;
+   .footer-copyright {
+     line-height: normal !important;
+   }
+   .footer-social {
+     float: none;
+     margin: auto;
+     margin-top: 8px;
+   }
+ }
+ .modal-wrapper .modal-block {
+   width: calc(100% - 16px) !important;
+ }
+}
+
+.ya-share2__list {
+  li {
+    margin-bottom: 8px !important;
+  }
+}
+
+.succes-msg {
+  text-align: center;
+  padding: 16px 0;
+  font-size: 13px;
+  color: green;
+  letter-spacing: 1px;
+}
